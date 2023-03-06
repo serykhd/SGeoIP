@@ -1,7 +1,7 @@
 # SGeoIP
 
 Более быстрая замена MaxMind
-MaxMind библиотека 660K ops/s vs IPFire своя реализация 6.5M ops/s
+MaxMind библиотека 660K ops/s vs (IPFire или DBIP) своя реализация 6.5M ops/s
 
 Преимущества:
 - Меньшее потребление памяти, меньше мусора создает
@@ -9,7 +9,7 @@ MaxMind библиотека 660K ops/s vs IPFire своя реализация 
 - Автоматическое обновление локального файла базы
 
 Недостатки:
-- Точность IPFire хуже
+- Точность хуже
 
 ![image](https://user-images.githubusercontent.com/125456822/219025814-28b5b9f8-348c-4fd3-b216-c047e1c60605.png)
 ![image](https://user-images.githubusercontent.com/125456822/219025827-cbcc38d2-554c-44c8-aca3-013ee72861ae.png)
