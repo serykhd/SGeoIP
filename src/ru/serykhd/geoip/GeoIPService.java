@@ -9,6 +9,4 @@ import java.util.Optional;
 public interface GeoIPService extends ShutdownableService {
 
     Optional<String> getCountryResponse(@NonNull InetAddress address);
-
-    // TODO https://db-ip.com/db/download/ip-to-country-lite
 }
