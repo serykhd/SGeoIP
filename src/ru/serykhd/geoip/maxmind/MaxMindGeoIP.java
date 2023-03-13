@@ -108,10 +108,7 @@ public class MaxMindGeoIP extends AbstractGeoIPService {
     public Optional<String> getCountryResponse(@NonNull InetAddress address) {
         Optional<CountryResponse> countryResponseOptional = reader.tryCountry(address);
 
-        if (countryResponseOptional.isPresent()) {
-            return Optional.ofNullable(countryResponseOptional.get().getCountry().getIsoCode());
-        }
+        return countryResponseOptional.map(countryResponse -> countryResponse.getCountry().getIsoCode());
 
-        return Optional.empty();
     }
 }
