@@ -25,14 +25,14 @@ public class DBIP extends AbstractGeoIPService {
 
     public static final DBIP INSTANCE = new DBIP();
 
-    private static final String GEO_URL = "https://download.db-ip.com/free/dbip-country-lite-2023-%s.csv.gz";
+    private static final String GEO_URL = "https://download.db-ip.com/free/dbip-country-lite-%s-%s.csv.gz";
 
     private final InternalLogger logger = InternalLoggerFactory.getInstance(DBIP.class);
 
     private final TreeMap<Long, Optional<String>> iso = new TreeMap<>();
 
     public DBIP() {
-        this(String.format(GEO_URL, parseMonth()));
+        this(String.format(GEO_URL, LocalDate.now().getYear(), parseMonth()));
     }
 
     private DBIP(String url) {
